@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr repeat(2, 0.5fr) repeat(3, 2fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    align-items: stretch;
+    grid-template-areas:
+      "logo logo"
+      "menu-principal menu-principal"
+      "leyenda leyenda"
+      "salud hogar"
+      "tranquilidad mujer"
+      "footer footer";
+  }
+  
+  .logo {  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1.1fr 0.9fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". slide carrito-y-search"
+      ". slide carrito-y-search"
+      ". slide carrito-y-search";
+    grid-area: logo;
+  }
+  
+  .carrito-y-search { grid-area: carrito-y-search; }
+  
+  .slide { grid-area: slide; }
+  
+  .menu-principal { grid-area: menu-principal; }
+  
+  .leyenda { grid-area: leyenda; }
+  
+  .salud { grid-area: salud; }
+  
+  .hogar { grid-area: hogar; }
+  
+  .tranquilidad { grid-area: tranquilidad; }
+  
+  .mujer { grid-area: mujer; }
+  
+  .footer { grid-area: footer; }
+  
+  
